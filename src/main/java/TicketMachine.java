@@ -87,4 +87,25 @@ public class TicketMachine {
 
         return "Ticket price: " + price + " cents. " + "Your total is " + total + ".";
     }
+
+
+        public static void main(String[] args) {
+            System.out.println("Naive Ticket running.");
+            // Exercise 2.1
+            //Create a TicketMachine object on the object bench.
+            TicketMachine ticketMachine = new TicketMachine(20);
+            //Upon viewing its methods, getBalance, getPrice, insertMoney, printTicket.
+            ticketMachine.getPrice();
+
+            //Use getPrice method to view the value of the price of the tickets that was set when this object was created.
+            Integer tPrice = ticketMachine.getPrice();
+            System.out.println("The price is: " + tPrice);
+            //se insertMoney method to simulate inserting an amount of money into the machine.
+            ticketMachine.insertMoney(10);
+            ticketMachine.insertMoney(20);
+
+            System.out.println(ticketMachine.printTicket());
+
+
+        }
 }
